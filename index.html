@@ -167,27 +167,53 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-1111" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hexo_image" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/05/18/1111/">Hexo Image</a>
+      <a class="article-title" href="/2022/05/18/hexo_image/">Hexo Image</a>
     </h1>
   
 
         
-        <a href="/2022/05/18/1111/" class="archive-article-date">
-  	<time datetime="2022-05-18T06:28:20.583Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-18</time>
+        <a href="/2022/05/18/hexo_image/" class="archive-article-date">
+  	<time datetime="2022-05-18T06:33:28.542Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="How-to-upload-image-in-hexo"><a href="#How-to-upload-image-in-hexo" class="headerlink" title="How to upload image in hexo"></a>How to upload image in hexo</h1><h2 id="1-change-the-config-yml"><a href="#1-change-the-config-yml" class="headerlink" title="1. change the _config.yml"></a>1. change the _config.yml</h2>
+        <h1 id="The-solution-to-Uploading-the-image-to-Blog"><a href="#The-solution-to-Uploading-the-image-to-Blog" class="headerlink" title="The solution to Uploading the image to Blog"></a>The solution to Uploading the image to Blog</h1><h2 id="1-Change-config-yml"><a href="#1-Change-config-yml" class="headerlink" title="1. Change _config.yml"></a>1. Change _config.yml</h2><p><code>post_asset_folder: true</code></p>
+<h2 id="2-Change-Setting-of-Typora"><a href="#2-Change-Setting-of-Typora" class="headerlink" title="2. Change Setting of Typora"></a>2. Change Setting of Typora</h2><ol>
+<li><p>Client Typora Preference setting</p>
+</li>
+<li><p>Go to the Image, then Change ‘’When Insert’’ like below</p>
+<p><img src="/2022/05/18/hexo_image/image-20220518164453853.png" alt="image-20220518164453853"></p>
+</li>
+</ol>
+<p>‘’${filename}’’ is to create a folder with the same name as your markdown file</p>
+<ol start="3">
+<li><p>Download image plugin</p>
+<pre><code>`npm install https://github.com/CodeFalling/hexo-asset-image --save`
+</code></pre>
+</li>
+<li><p>then use</p>
+<p><code>hexo clean</code></p>
+<p><code>hexo g</code></p>
+<p><code>hexo s</code></p>
+</li>
+</ol>
+<p>​ to start your server</p>
+<ol start="5">
+<li>Note Keep in mind that the route of the image should be ‘markdown filename’&#x2F;‘image name’. (This should be done by Typora automatically. eg. like below)</li>
+</ol>
+<p><img src="/2022/05/18/hexo_image/image-20220518165355548.png" alt="image-20220518165355548"></p>
+<p><img src="/2022/05/18/hexo_image/image-20220518165428168.png" alt="image-20220518165428168"></p>
+
       
 
       
@@ -206,6 +232,10 @@ ga('send', 'pageview');
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">back end</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Typora</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -214,7 +244,7 @@ ga('send', 'pageview');
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/05/18/1111/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/05/18/hexo_image/">展开全文 >></a>
         </p>
       
 
@@ -419,6 +449,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">back end</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Typora</a>
               </li>
             
             <div class="clearfix"></div>
