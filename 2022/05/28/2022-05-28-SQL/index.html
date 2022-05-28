@@ -8,13 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>SQL Self-Learning Notes | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="SQL">
+<meta property="og:type" content="article">
 <meta property="og:title" content="SQL Self-Learning Notes">
-<meta property="og:url" content="http://example.com/2022/05/18/2022-05-18-Sql/index.html">
+<meta property="og:url" content="http://example.com/2022/05/28/2022-05-28-SQL/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="SQL">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-18T07:17:42.507Z">
-<meta property="article:modified_time" content="2022-05-24T02:13:16.516Z">
+<meta property="article:published_time" content="2022-05-28T11:54:52.825Z">
+<meta property="article:modified_time" content="2022-05-28T12:07:39.826Z">
 <meta property="article:author" content="Jiahao Lu">
 <meta property="article:tag" content="DataBase">
 <meta property="article:tag" content="SQL">
@@ -167,7 +169,7 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2022-05-18-Sql" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2022-05-28-SQL" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -179,15 +181,72 @@ ga('send', 'pageview');
   
 
         
-        <a href="/2022/05/18/2022-05-18-Sql/" class="archive-article-date">
-  	<time datetime="2022-05-18T07:17:42.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-18</time>
+        <a href="/2022/05/28/2022-05-28-SQL/" class="archive-article-date">
+  	<time datetime="2022-05-28T11:54:52.825Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <span id="more"></span>
+        <h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><span id="more"></span>
+
+<ol>
+<li><h2 id="Function-Use"><a href="#Function-Use" class="headerlink" title="Function Use"></a>Function Use</h2></li>
+</ol>
+<p>USE +directory of SQL files;<br>SELECT (column name or * for everything, the order will match with the output)</p>
+<p>FROM (filename) orders O</p>
+<p>JOIN customers C</p>
+<p>ON O.customer_id &#x3D; C.customer_id</p>
+<p>WHERE (limit, or state &#x3D; ‘CA’) (the upper and lower case will be ignored)</p>
+<p>ORDER BY first_name DESC (order in descending order) (ASC order in ascending order)</p>
+<p>(ORDER BY first_name, state order by first_name first, then if first_name same order by state)</p>
+<p>LIMIT 3 (only take the top 3)</p>
+<p>(LIMIT 6,3 ) (only take the 7th, 8th, and 9th)</p>
+<h2 id="2-Symbol"><a href="#2-Symbol" class="headerlink" title="2. Symbol:"></a>2. Symbol:</h2><p>&gt;，&gt;&#x3D;，&lt;，&lt;&#x3D;，&#x3D;，（!&#x3D;，&lt;&gt;） not located in ‘CA ’</p>
+<h2 id="3-SELECT-function"><a href="#3-SELECT-function" class="headerlink" title="3. SELECT function"></a>3. SELECT function</h2><p>Select points*10 AS discount_factor</p>
+<p>Select Distinct state (to avoid duplicate)</p>
+<h2 id="4-逻辑运算符"><a href="#4-逻辑运算符" class="headerlink" title="4. 逻辑运算符"></a>4. 逻辑运算符</h2><p>OR, AND, NOT</p>
+<h2 id="5-WHERE-function"><a href="#5-WHERE-function" class="headerlink" title="5. WHERE function"></a>5. WHERE function</h2><p>WHERE state IN (‘LA’, ‘GA’)</p>
+<h2 id="6-BETWEEN-and-function"><a href="#6-BETWEEN-and-function" class="headerlink" title="6. BETWEEN and function"></a>6. BETWEEN and function</h2><p>BETWEEN 1 AND 10 (1≤x≤10)</p>
+<h2 id="7-and-Use"><a href="#7-and-Use" class="headerlink" title="7. % and _ Use"></a>7. % and _ Use</h2><p>‘%’ any number of characters</p>
+<p>‘_’ single character</p>
+<p>WHERE last_name LIKE ‘b’ ‘%b’ ‘%b%’ ‘b%’</p>
+<p>\1. there exists ‘b’, 2. end with ‘b’, 3. ‘b’ is middle of the name 4. start with ‘b’</p>
+<p>WHERE last_name LIKE ‘_b’ ‘y_b’</p>
+<p>\1. the second is ‘b’, 2. the first is ‘y’, and the third is ‘b’</p>
+<h2 id="8-REGEXP-use"><a href="#8-REGEXP-use" class="headerlink" title="8. REGEXP use"></a>8. REGEXP use</h2><p>LIKE —–&gt; REGEXP (regular expression)</p>
+<p>‘^a’ beginning with ‘a’</p>
+<p>‘$a’ end with ‘a’</p>
+<p>‘|’ logical or</p>
+<p>‘[abcd]a’ ‘aa’, ‘ba’, ‘ca’, ‘da’</p>
+<p>‘[a-f]a’ ‘aa’, ‘ba’, ‘ca’, ‘da’, ‘ea’, ‘fa’</p>
+<h1 id="INNER-JOIN-9-10"><a href="#INNER-JOIN-9-10" class="headerlink" title="(INNER) JOIN 9,10"></a>(INNER) JOIN 9,10</h1><h2 id="8-Join-with-multiple-tables-3-here"><a href="#8-Join-with-multiple-tables-3-here" class="headerlink" title="8. Join with multiple tables (3 here)"></a>8. Join with multiple tables (3 here)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">USE sql_store;</span><br><span class="line"></span><br><span class="line">SELECT</span><br><span class="line">FROM orders o</span><br><span class="line">JOIN customers c</span><br><span class="line"> 		ON o.customer_id = c.customer_id</span><br><span class="line">JOIN order_statuses os</span><br><span class="line">		ON o.status = os.order_status_id</span><br></pre></td></tr></table></figure>
+
+<h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><p>If there are composite primary key, then we use compound join conditions</p>
+<p>(Since one id is not enough to identify the item, the items can be identified by two or more id variables)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM order_items oi</span><br><span class="line">JOIN order_item_notes oin</span><br><span class="line">	ON oi.order_id = oin.order_id</span><br><span class="line">	AND oi.product_id = oin.product_id</span><br></pre></td></tr></table></figure>
+
+<h1 id="OUTER-JOIN"><a href="#OUTER-JOIN" class="headerlink" title="OUTER JOIN"></a>OUTER JOIN</h1><h2 id="1-LEFT-OUTER-JOIN-the-table-will-be-returned-whether-the-condition-is-true-or-not"><a href="#1-LEFT-OUTER-JOIN-the-table-will-be-returned-whether-the-condition-is-true-or-not" class="headerlink" title="1. LEFT (OUTER) JOIN: the table will be returned whether the condition is true or not"></a>1. LEFT (OUTER) JOIN: the table will be returned whether the condition is true or not</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		c.customer_id,</span><br><span class="line">		c.first_name,</span><br><span class="line">		o.order_id</span><br><span class="line">FROM customers c</span><br><span class="line">LEFT JOIN orders o</span><br><span class="line">		ON c.customer_id = o.customer_id</span><br><span class="line">ORDER BY c.cutomer_id</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-RIGHT-OUTER-JOIN"><a href="#2-RIGHT-OUTER-JOIN" class="headerlink" title="2. RIGHT (OUTER) JOIN:"></a>2. RIGHT (OUTER) JOIN:</h2><p>Shows all the orders:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		c.customer_id,</span><br><span class="line">		c.first_name,</span><br><span class="line">		o.order_id</span><br><span class="line">FROM customers c</span><br><span class="line">RIGHT JOIN orders o</span><br><span class="line">		ON c.customer_id = o.customer_id</span><br><span class="line">ORDER BY c.customer_id</span><br></pre></td></tr></table></figure>
+
+<p>By swapping</p>
+<p>Shows all the customers:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		c.customer_id,</span><br><span class="line">		c.first_name,</span><br><span class="line">		o.order_id</span><br><span class="line">FROM orders o</span><br><span class="line">RIGHT JOIN customers c</span><br><span class="line">		ON c.customer_id = o.customer_id</span><br><span class="line">ORDER BY c.customer_id</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Outer-join-with-multiple-tables"><a href="#3-Outer-join-with-multiple-tables" class="headerlink" title="3. Outer join with multiple tables"></a>3. Outer join with multiple tables</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		c.customer_id,</span><br><span class="line">		c.first_name,</span><br><span class="line">		o.order_id,</span><br><span class="line">		sh.name AS shipper</span><br><span class="line">FROM customers c</span><br><span class="line">LEFT JOIN orders o</span><br><span class="line">		ON c.customer_id = o.customer_id</span><br><span class="line">LEFT JOIN shippers sh</span><br><span class="line">		ON o.shipper_id = sh.shipper_id</span><br><span class="line">ORDER BY c.customer_id</span><br></pre></td></tr></table></figure>
+
+<h1 id="NOTES"><a href="#NOTES" class="headerlink" title="NOTES:"></a>NOTES:</h1><p>Primary key is unique</p>
+<p>Foreign key is the key used to associate with other table for the variable</p>
+<p>Composite key is used when one key is not enough to identify the variable</p>
+<p>INT whole numbers</p>
+<p>DECIMAL(M, N) M digits of number with N digits decimal numbers</p>
+<p>VARCHAR(50) String of text of length 50 characteristics</p>
+<p>BLOB Binary Large Objects, Stores large data</p>
+<p>DATE ‘YYYY-MM-DD’</p>
+<p>TIMESTAMP ‘YYYY-MM-DD HH:MM:SS’ -used for recording</p>
 
       
 
@@ -282,7 +341,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/18/2022-05-18-Sql/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/28/2022-05-28-SQL/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,18 +355,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2022/05/24/2022-05-24-%E7%88%AC%E8%99%AB%20notes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          爬虫
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/18/2022-05-18-hexo_image/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo Image</div>
+    <a href="/2022/05/28/2022-05-28-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%89%A9%E5%B1%95%E5%8F%8A%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java数据类型拓展</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -449,14 +499,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">DataBase</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">front end</a>
               </li>
              
@@ -470,6 +512,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DataBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
