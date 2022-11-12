@@ -6,18 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>爬虫 | Hexo</title>
+  <title>Multi-Thread Contents | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="爬虫">
-<meta property="og:url" content="http://example.com/2022/05/24/2022-05-24-%E7%88%AC%E8%99%AB%20notes/index.html">
+  <meta name="description" content="Multi-Thread Contents">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multi-Thread Contents">
+<meta property="og:url" content="http://example.com/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Multi-Thread Contents">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-24T02:12:20.962Z">
-<meta property="article:modified_time" content="2022-05-24T02:13:17.522Z">
+<meta property="og:image" content="http://example.com/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/S1.png">
+<meta property="og:image" content="http://example.com/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/WechatIMG341.png">
+<meta property="og:image" content="http://example.com/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/WechatIMG342.png">
+<meta property="article:published_time" content="2022-11-11T02:31:38.015Z">
+<meta property="article:modified_time" content="2022-11-12T04:37:14.231Z">
 <meta property="article:author" content="Jiahao Lu">
-<meta property="article:tag" content="爬虫">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="javaMultiThread">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/S1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -166,27 +173,143 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2022-05-24-爬虫 notes" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2022-11-12-线程礼让" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      爬虫
+      Multi-Thread Contents
     </h1>
   
 
         
-        <a href="/2022/05/24/2022-05-24-%E7%88%AC%E8%99%AB%20notes/" class="archive-article-date">
-  	<time datetime="2022-05-24T02:12:20.962Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-24</time>
+        <a href="/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/" class="archive-article-date">
+  	<time datetime="2022-11-11T02:31:38.015Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <span id="more"></span>
+        <h1 id="Multi-Thread-Contents"><a href="#Multi-Thread-Contents" class="headerlink" title="Multi-Thread Contents"></a>Multi-Thread Contents</h1><span id="more"></span>
+
+<h3 id="1-线程创建"><a href="#1-线程创建" class="headerlink" title="1.线程创建"></a>1.线程创建</h3><p>Thread，Runnable，Callable</p>
+<p>Thread（class） 继承 Thread 类</p>
+<p>Runnable（接口）实现 Runnable 接口</p>
+<p>Callable 接口 实现 Callable 接口</p>
+<ol>
+<li><h5 id="继承-Thread-类-extends-thread"><a href="#继承-Thread-类-extends-thread" class="headerlink" title="继承 Thread 类 extends thread"></a>继承 Thread 类 extends thread</h5><p>1.1 自定义线程类继承 Thread 类</p>
+<p>1.2 重写 run()方法，编写线程执行体</p>
+<p>1.3 创建线程对象，调用 start()方法启动线程</p>
+</li>
+<li><h5 id="实现-Runnable-接口-implements-Runnable"><a href="#实现-Runnable-接口-implements-Runnable" class="headerlink" title="实现 Runnable 接口 implements Runnable"></a>实现 Runnable 接口 implements Runnable</h5><p>2.1 定义 MyRunnable 类实现 Runnable 接口</p>
+<p>2.2 实现 run()方法，编写线程执行体</p>
+<p>2.3 创建线程对象，调用 start()方法启动线程</p>
+</li>
+<li><h5 id="实现-Callable-接口-implements-Callable"><a href="#实现-Callable-接口-implements-Callable" class="headerlink" title="实现 Callable 接口 implements Callable"></a>实现 Callable 接口 implements Callable</h5><p>3.1 实现 Callable 接口，需要返回值类型</p>
+<p>3.2 重写 call 方法，需要抛出异常</p>
+<p>3.3 创建目标对象</p>
+<p>3.4 创建执行服务：</p>
+<p>ExecutorService service &#x3D; Executors.newFixedThreadPool(1);</p>
+<p>3.5 提交执行：Future<Boolean> result1 &#x3D; service.submit(t1);</Boolean></p>
+<p>3.6 获取结果：boolean r1 &#x3D; result1.get()</p>
+<p>3.7 关闭服务：service.shutdown();</p>
+</li>
+</ol>
+<h3 id="2-线程礼让"><a href="#2-线程礼让" class="headerlink" title="2. 线程礼让"></a>2. 线程礼让</h3><p>thread.yield()</p>
+<p>礼让线程，让当前正在执行的线程暂停，但不阻塞</p>
+<p>将线程从运行状态转为就绪状态</p>
+<p>让 cpu 重新调度，礼让不一定成功！ 看 CPU 心情</p>
+<h3 id="3-合并线程"><a href="#3-合并线程" class="headerlink" title="3. 合并线程"></a>3. 合并线程</h3><p>thread.join()</p>
+<p>Join 合并线程，待此线程执行完成后，再执行其他线程，其他线程阻塞</p>
+<p>可以想象成插队</p>
+<h3 id="4-线程状态观测"><a href="#4-线程状态观测" class="headerlink" title="4. 线程状态观测"></a>4. 线程状态观测</h3><p>Thread.State</p>
+<ol>
+<li>New: 新生</li>
+</ol>
+<p>A thread that has not yet started is in this state</p>
+<ol start="2">
+<li>RUNNABLE: 就绪</li>
+</ol>
+<p>A thread executing in the java virtual machine is in this state.</p>
+<ol start="3">
+<li>BLOCKED:运行（阻塞）</li>
+</ol>
+<p>A thread that is blocked waiting for a monitor lock is in this state</p>
+<ol start="4">
+<li>WAITING:运行（阻塞）</li>
+</ol>
+<p>A thread that is waiting indefinitely for another thread to perform a particular action is in this state</p>
+<ol start="5">
+<li>TERMINATED:死亡</li>
+</ol>
+<p>A thread that has exited is in this state</p>
+<p><img src="/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/S1.png" alt="S1"></p>
+<h3 id="5-线程优先级"><a href="#5-线程优先级" class="headerlink" title="5.线程优先级"></a>5.线程优先级</h3><p>Java 提供一个线程调度器来监控程序中启动后进入就绪状态的所有线程，线程调度器按照优先级决定应该调度那个线程来进行。</p>
+<p>优先级设立在 Thread.start 之前</p>
+<p>线程的优先级用数字表示，范围从 1—10.</p>
+<p>1.Thread.MIN_PRIORITY &#x3D; 1;</p>
+<p>2.Thread.MAX_PRIORITY &#x3D; 10;</p>
+<p>3.Thread.NORM_PRIORITY &#x3D; 5;</p>
+<p>使用以下方式改变或获取优先级</p>
+<p>getPriority() setPriority( int xxx)</p>
+<p>注意：优先级不一定高的是先跑的，概率比较大而已</p>
+<h3 id="6-守护线程"><a href="#6-守护线程" class="headerlink" title="6.守护线程"></a>6.守护线程</h3><p>Thread.setDaemon(true);</p>
+<p>线程分为用户线程和守护线程</p>
+<p>虚拟机必须确保用户线程执行完毕（用户线程：main）</p>
+<p>虚拟机不用等待守护线程执行完毕</p>
+<h3 id="7-线程同步"><a href="#7-线程同步" class="headerlink" title="7.线程同步"></a>7.线程同步</h3><p>多个线程操作同一个资源</p>
+<p>并发：同一个对象被多个线程同时操作，多个需要同时访问的时候会进入到等待的线程池：队列+锁</p>
+<p>由于同一进程共享同一块存储空间，在带来方便的同时，也带来了访问冲突问题，为了保证数据在方法中被访问时的正确性，在访问时加入锁机制 synchronized，当一线程获得对象的排它锁，独占资源，其他线程必须等待，使用后释放锁即可。</p>
+<p>存在以下问题：</p>
+<ol>
+<li>一个线程持有锁会导致其他所有需要此锁的线程挂起</li>
+<li>在多线程竞争下，加锁，释放锁会导致比较多的上下文切换和调度延时，引起性能问题；</li>
+<li>如果一个优先级高的线程等待一个优先级低的线程释放锁，会导致优先级倒置，引起性能问题</li>
+</ol>
+<h3 id="8-同步方法"><a href="#8-同步方法" class="headerlink" title="8.同步方法"></a>8.同步方法</h3><p>1.由于我们可以通过 private 关键字来保证数据对象只能被方法访问，所以我们只需要针对方法提出一套机制，这套机制就是 synchronized 关键字，它包括两种用法：synchronized 方法和 synchronized 块。</p>
+<p>同步方法：public synchronized void method(int args){}</p>
+<p>2.synchronized 方法控制对“对象”的访问，每个对象对应一把锁，每个 synchronized 方法都必须获得调用该方法的对象的锁才能执行，否则线程会阻塞，方法一旦执行，就独占该锁，知道该方法返回才释放锁，后面被阻塞的线程才能获得这个锁，继续执行</p>
+<p>缺陷：</p>
+<p>1.若将一个大的方法申明为 synchronized 将会影响效率</p>
+<p>2.方法里面需要修改的内容才需要锁，锁的太多，浪费资源</p>
+<p>同步块：</p>
+<p>synchronized 默认锁的是 this</p>
+<p>synchronized(Obj){}</p>
+<p>锁的 Obj，就是锁的变化的量，共享的量</p>
+<h3 id="9-死锁"><a href="#9-死锁" class="headerlink" title="9.死锁"></a>9.死锁</h3><p>多个线程各自占有一些共享资源，并且互相等待其他线程占有的资源才能运行，而导致两个或者多个线程都在等待对方释放资源，都停止执行的情形。同一个同步块</p>
+<p>同时拥有“两个以上的对象的锁”时，就可能发生“死锁”的问题。</p>
+<p>产生死锁的四个必要条件：</p>
+<p>1.互斥条件：一个资源每次只能被一个进程使用</p>
+<p>2.请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。</p>
+<p>3.不剥夺条件：进程已获得的资源，在未使用完之前，不能强行剥夺</p>
+<p>4.循环等待条件：若干进程之间形成一种头尾相接的循环等待资源关系</p>
+<p>上面列出了死锁的四个必要条件，我们只要想办法破其中的任意一个或多个条件就可以避免死锁发生</p>
+<h3 id="10-Lock-锁"><a href="#10-Lock-锁" class="headerlink" title="10.Lock(锁)"></a>10.Lock(锁)</h3><p>1.从 JDK5.0 开始，Java 提供了更强大的线程同步机制—-通过显示定义同步锁对来实现同步。同步锁使用 Lock 对象充当</p>
+<p>2.java.util.concurrent.locks.Lock 接口是控制多个线程对共享资源进行访问的工具。 锁提供了对共享资源的独占访问，每次只能有一个线程对 Lock 对象加锁，线程开始访问共享资源之前应先获得 Lock 对象</p>
+<p>3.ReentrantLock 类实现了 Lock，它拥有与 synchronized 相同的并发性和内存语义，在实现线程安全的控制中，比较常用的是 ReentrantLock，可以显式加锁 ,释放锁。</p>
+<h3 id="11-synchronized-与-Lock-的对比"><a href="#11-synchronized-与-Lock-的对比" class="headerlink" title="11.synchronized 与 Lock 的对比"></a>11.synchronized 与 Lock 的对比</h3><p>1.Lock 是显式锁（手动开启和关闭锁，别忘记关闭锁） synchronized 是隐式锁，出了作用域自动释放</p>
+<p>2.Lock 只有代码块锁，synchronized 有代码块锁和方法锁</p>
+<p>3.使用 Lock 锁，JVM 将花费较少的时间来调度线程，性能更好。并且具有更好的扩展性（提供更多的子类）</p>
+<p>4.优先使用顺序：</p>
+<p>Lock &gt; 同步代码块(已经进入了方法体，分配了相应资源) &gt; 同步方法(在方法体之外)</p>
+<h3 id="12-线程协作"><a href="#12-线程协作" class="headerlink" title="12. 线程协作"></a>12. 线程协作</h3><p>线程同步问题，生产者和消费者共享同一个资源，并且生产者和消费者之间相互依赖，互为条件。</p>
+<p>synchronized 只能实现同步，不能实现通信</p>
+<p><img src="/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/WechatIMG341.png" alt="WechatIMG341"></p>
+<h4 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h4><p>1.管程法：生产者将生产好的数据放入缓冲区，消费者从缓冲区拿出数据</p>
+<p>2.并发协作模型“生产者&#x2F;消费者模式”—–&gt;信号灯法</p>
+<h3 id="13-使用线程池"><a href="#13-使用线程池" class="headerlink" title="13.使用线程池"></a>13.使用线程池</h3><p>背景：经常创建和销毁，使用了特别大的资源，比如并发情况下的线程，对性能影响很大</p>
+<p>思想：提前创建好多个线程，放入线程池中，使用时直接获取，使用完放回池中。可以避免频繁创建销毁，实现重复利用。类似生活中的公共交通工具。</p>
+<p>好处：</p>
+<p>提高响应速度（减少了创建新线程的时间）</p>
+<p>降低资源消耗（重复利用线程池中线程，不需要每次都创建）</p>
+<p>便于线程管理：</p>
+<p>​ corePoolSize：核心池的大小</p>
+<p>​ maxiumPoolSize：最大线程数</p>
+<p>​ keepAliveTime：线程没有任务时最多保持多长时间后会终止</p>
+<p><img src="/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/WechatIMG342.png" alt="WechatIMG342"></p>
 
       
 
@@ -221,7 +344,11 @@ ga('send', 'pageview');
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaMultiThread</a>
         		</li>
       		
 		</ul>
@@ -277,7 +404,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/24/2022-05-24-%E7%88%AC%E8%99%AB%20notes/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,18 +418,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2022/05/28/2022-05-28-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%89%A9%E5%B1%95%E5%8F%8A%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java数据类型拓展
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/18/2022-05-18-hexo_image/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo Image</div>
+    <a href="/2022/05/28/2022-05-28-SQL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SQL Self-Learning Notes</div>
       <i class="icon-circle-right"></i>
     </a>
   
