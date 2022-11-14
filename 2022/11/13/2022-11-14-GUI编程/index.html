@@ -6,21 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>SQL Self-Learning Notes | Hexo</title>
+  <title>GUI 编程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SQL">
+  <meta name="description" content="GUI 编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL Self-Learning Notes">
-<meta property="og:url" content="http://example.com/2022/05/28/2022-05-28-SQL/index.html">
+<meta property="og:title" content="GUI 编程">
+<meta property="og:url" content="http://example.com/2022/11/13/2022-11-14-GUI%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="SQL">
+<meta property="og:description" content="GUI 编程">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-28T11:54:52.825Z">
-<meta property="article:modified_time" content="2022-05-28T12:12:06.829Z">
+<meta property="og:image" content="http://example.com/2022/Blog/source/_posts/2022-11-14-GUI%E7%BC%96%E7%A8%8B/WechatIMG1846.png">
+<meta property="article:published_time" content="2022-11-13T09:17:50.435Z">
+<meta property="article:modified_time" content="2022-11-14T12:56:46.736Z">
 <meta property="article:author" content="Jiahao Lu">
-<meta property="article:tag" content="DataBase">
-<meta property="article:tag" content="SQL">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="GUI">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/Blog/source/_posts/2022-11-14-GUI%E7%BC%96%E7%A8%8B/WechatIMG1846.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -169,87 +171,74 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2022-05-28-SQL" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2022-11-14-GUI编程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SQL Self-Learning Notes
+      GUI 编程
     </h1>
   
 
         
-        <a href="/2022/05/28/2022-05-28-SQL/" class="archive-article-date">
-  	<time datetime="2022-05-28T11:54:52.825Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-28</time>
+        <a href="/2022/11/13/2022-11-14-GUI%E7%BC%96%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2022-11-13T09:17:50.435Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><span id="more"></span>
+        <h1 id="GUI-编程"><a href="#GUI-编程" class="headerlink" title="GUI 编程"></a>GUI 编程</h1><span id="more"></span>
 
-<ol>
-<li><h2 id="Function-Use"><a href="#Function-Use" class="headerlink" title="Function Use"></a>Function Use</h2></li>
+<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>Graphical User Interface</p>
+<p>Gui 的核心技术：Swing AWT</p>
+<p>1.因为界面不美观</p>
+<p>2.需要 jre 环境</p>
+<p>为什么学习</p>
+<p>1.可以写一些小工具</p>
+<p>2.工作有可能需要维护 swing 界面</p>
+<p>3.了解 MVC 架构，了解监听</p>
+<h2 id="2-AWT"><a href="#2-AWT" class="headerlink" title="2.AWT"></a>2.AWT</h2><h4 id="2-1AWT-介绍"><a href="#2-1AWT-介绍" class="headerlink" title="2.1AWT 介绍"></a>2.1AWT 介绍</h4><p>1.包含了很多类和接口！</p>
+<p>2.元素：窗口，按钮，文本框</p>
+<h4 id="2-2-component-和-container"><a href="#2-2-component-和-container" class="headerlink" title="2.2.component 和 container"></a>2.2.component 和 container</h4><p><img src="/2022/11/13/2022-11-14-GUI%E7%BC%96%E7%A8%8B/../../../Blog/source/_posts/2022-11-14-GUI%E7%BC%96%E7%A8%8B/WechatIMG1846.png" alt="WechatIMG1846"></p>
+<h4 id="2-3-Frame"><a href="#2-3-Frame" class="headerlink" title="2.3 Frame"></a>2.3 Frame</h4><h4 id="2-4-Panel"><a href="#2-4-Panel" class="headerlink" title="2.4 Panel"></a>2.4 Panel</h4><p>包括了监听事件，监听窗口关闭事件 system.exit(0)</p>
+<h4 id="2-5-布局管理器"><a href="#2-5-布局管理器" class="headerlink" title="2.5 布局管理器"></a>2.5 布局管理器</h4><p>1.流式布局</p>
+<p>2.东西南北中</p>
+<p>3.表格式布局</p>
+<h4 id="2-6-总结"><a href="#2-6-总结" class="headerlink" title="2.6 总结"></a>2.6 总结</h4><p>1.Frame 是一个顶级窗口</p>
+<p>2.Panel 无法单独显示，必须添加到某个容器中</p>
+<p>3.布局管理器</p>
+<p>流式布局</p>
+<p>表格式布局</p>
+<p>东南西北中</p>
+<ol start="4">
+<li>大小，定位，背景颜色，可见性，监听</li>
 </ol>
-<p>USE +directory of SQL files;<br>SELECT (column name or * for everything, the order will match with the output)</p>
-<p>FROM (filename) orders O</p>
-<p>JOIN customers C</p>
-<p>ON O.customer_id &#x3D; C.customer_id</p>
-<p>WHERE (limit, or state &#x3D; ‘CA’) (the upper and lower case will be ignored)</p>
-<p>ORDER BY first_name DESC (order in descending order) (ASC order in ascending order)</p>
-<p>(ORDER BY first_name, state order by first_name first, then if first_name same order by state)</p>
-<p>LIMIT 3 (only take the top 3)</p>
-<p>(LIMIT 6,3 ) (only take the 7th, 8th, and 9th)</p>
-<h2 id="2-Symbol"><a href="#2-Symbol" class="headerlink" title="2. Symbol:"></a>2. Symbol:</h2><p>&gt;，&gt;&#x3D;，&lt;，&lt;&#x3D;，&#x3D;，（!&#x3D;，&lt;&gt;） not located in ‘CA ’</p>
-<h2 id="3-SELECT-function"><a href="#3-SELECT-function" class="headerlink" title="3. SELECT function"></a>3. SELECT function</h2><p>Select points*10 AS discount_factor</p>
-<p>Select Distinct state (to avoid duplicate)</p>
-<h2 id="4-逻辑运算符"><a href="#4-逻辑运算符" class="headerlink" title="4. 逻辑运算符"></a>4. 逻辑运算符</h2><p>OR, AND, NOT</p>
-<h2 id="5-WHERE-function"><a href="#5-WHERE-function" class="headerlink" title="5. WHERE function"></a>5. WHERE function</h2><p>WHERE state IN (‘LA’, ‘GA’)</p>
-<h2 id="6-BETWEEN-and-function"><a href="#6-BETWEEN-and-function" class="headerlink" title="6. BETWEEN and function"></a>6. BETWEEN and function</h2><p>BETWEEN 1 AND 10 (1≤x≤10)</p>
-<h2 id="7-and-Use"><a href="#7-and-Use" class="headerlink" title="7. % and _ Use"></a>7. % and _ Use</h2><p>‘%’ any number of characters</p>
-<p>‘_’ single character</p>
-<p>WHERE last_name LIKE ‘b’ ‘%b’ ‘%b%’ ‘b%’</p>
-<p>\1. there exists ‘b’, 2. end with ‘b’, 3. ‘b’ is middle of the name 4. start with ‘b’</p>
-<p>WHERE last_name LIKE ‘_b’ ‘y_b’</p>
-<p>\1. the second is ‘b’, 2. the first is ‘y’, and the third is ‘b’</p>
-<h2 id="8-REGEXP-use"><a href="#8-REGEXP-use" class="headerlink" title="8. REGEXP use"></a>8. REGEXP use</h2><p>LIKE —–&gt; REGEXP (regular expression)</p>
-<p>‘^a’ beginning with ‘a’</p>
-<p>‘$a’ end with ‘a’</p>
-<p>‘|’ logical or</p>
-<p>‘[abcd]a’ ‘aa’, ‘ba’, ‘ca’, ‘da’</p>
-<p>‘[a-f]a’ ‘aa’, ‘ba’, ‘ca’, ‘da’, ‘ea’, ‘fa’</p>
-<h1 id="INNER-JOIN-9-10"><a href="#INNER-JOIN-9-10" class="headerlink" title="(INNER) JOIN 9,10"></a>(INNER) JOIN 9,10</h1><h2 id="8-Join-with-multiple-tables-3-here"><a href="#8-Join-with-multiple-tables-3-here" class="headerlink" title="8. Join with multiple tables (3 here)"></a>8. Join with multiple tables (3 here)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">USE sql_store;</span><br><span class="line"></span><br><span class="line">SELECT</span><br><span class="line">FROM orders o</span><br><span class="line">JOIN customers c</span><br><span class="line"> 		ON o.customer_id = c.customer_id</span><br><span class="line">JOIN order_statuses os</span><br><span class="line">		ON o.status = os.order_status_id</span><br></pre></td></tr></table></figure>
+<h4 id="2-7-事件监听"><a href="#2-7-事件监听" class="headerlink" title="2.7 事件监听"></a>2.7 事件监听</h4><p>可以一个按钮，共享一个事件</p>
+<h4 id="2-8-输入框-TextField"><a href="#2-8-输入框-TextField" class="headerlink" title="2.8 输入框 TextField"></a>2.8 输入框 TextField</h4><p>1.需要监听这个文本框输入的文字</p>
+<p>2.按下 enter，就会触发这个输入框的事件</p>
+<p>3.可以设置替换编码来保密 textFirld.setEchoChar(‘*‘);</p>
+<p>4.监听事件里需要获得一些资源，得返回一个对象</p>
+<h4 id="2-9Paint"><a href="#2-9Paint" class="headerlink" title="2.9Paint"></a>2.9Paint</h4><p>需要 extends Frame</p>
+<p>Override paint()</p>
+<p>1.画笔需要有颜色，需要可以画画</p>
+<p>2.养成习惯，画笔用完，将它还原到最初的颜色</p>
+<h4 id="2-10-鼠标监听"><a href="#2-10-鼠标监听" class="headerlink" title="2.10 鼠标监听"></a>2.10 鼠标监听</h4><p>目的：实现鼠标画画</p>
+<h4 id="2-11-窗口监听"><a href="#2-11-窗口监听" class="headerlink" title="2.11 窗口监听"></a>2.11 窗口监听</h4><h4 id="2-12-键盘监听"><a href="#2-12-键盘监听" class="headerlink" title="2.12 键盘监听"></a>2.12 键盘监听</h4><h2 id="3-Swing"><a href="#3-Swing" class="headerlink" title="3.Swing"></a>3.Swing</h2><h4 id="3-1-窗口-面板"><a href="#3-1-窗口-面板" class="headerlink" title="3.1 窗口 面板"></a>3.1 窗口 面板</h4><p>改变 background 的颜色，需要先得 frame.getcontentpanel（）， 拿到一个容器</p>
+<h4 id="3-2-弹窗"><a href="#3-2-弹窗" class="headerlink" title="3.2 弹窗"></a>3.2 弹窗</h4><p>JDialog 自带关闭功能，不用另外声明</p>
+<h4 id="3-3-标签"><a href="#3-3-标签" class="headerlink" title="3.3 标签"></a>3.3 标签</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Label</span>();</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">JLabel</span>();</span><br></pre></td></tr></table></figure>
 
-<h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><p>If there are composite primary key, then we use compound join conditions</p>
-<p>(Since one id is not enough to identify the item, the items can be identified by two or more id variables)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM order_items oi</span><br><span class="line">JOIN order_item_notes oin</span><br><span class="line">	ON oi.order_id = oin.order_id</span><br><span class="line">	AND oi.product_id = oin.product_id</span><br></pre></td></tr></table></figure>
-
-<h1 id="OUTER-JOIN"><a href="#OUTER-JOIN" class="headerlink" title="OUTER JOIN"></a>OUTER JOIN</h1><h2 id="1-LEFT-OUTER-JOIN-the-table-will-be-returned-whether-the-condition-is-true-or-not"><a href="#1-LEFT-OUTER-JOIN-the-table-will-be-returned-whether-the-condition-is-true-or-not" class="headerlink" title="1. LEFT (OUTER) JOIN: the table will be returned whether the condition is true or not"></a>1. LEFT (OUTER) JOIN: the table will be returned whether the condition is true or not</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		c.customer_id,</span><br><span class="line">		c.first_name,</span><br><span class="line">		o.order_id</span><br><span class="line">FROM customers c</span><br><span class="line">LEFT JOIN orders o</span><br><span class="line">		ON c.customer_id = o.customer_id</span><br><span class="line">ORDER BY c.cutomer_id</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-RIGHT-OUTER-JOIN"><a href="#2-RIGHT-OUTER-JOIN" class="headerlink" title="2. RIGHT (OUTER) JOIN:"></a>2. RIGHT (OUTER) JOIN:</h2><p>Shows all the orders:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		c.customer_id,</span><br><span class="line">		c.first_name,</span><br><span class="line">		o.order_id</span><br><span class="line">FROM customers c</span><br><span class="line">RIGHT JOIN orders o</span><br><span class="line">		ON c.customer_id = o.customer_id</span><br><span class="line">ORDER BY c.customer_id</span><br></pre></td></tr></table></figure>
-
-<p>By swapping</p>
-<p>Shows all the customers:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		c.customer_id,</span><br><span class="line">		c.first_name,</span><br><span class="line">		o.order_id</span><br><span class="line">FROM orders o</span><br><span class="line">RIGHT JOIN customers c</span><br><span class="line">		ON c.customer_id = o.customer_id</span><br><span class="line">ORDER BY c.customer_id</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-Outer-join-with-multiple-tables"><a href="#3-Outer-join-with-multiple-tables" class="headerlink" title="3. Outer join with multiple tables"></a>3. Outer join with multiple tables</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		c.customer_id,</span><br><span class="line">		c.first_name,</span><br><span class="line">		o.order_id,</span><br><span class="line">		sh.name AS shipper</span><br><span class="line">FROM customers c</span><br><span class="line">LEFT JOIN orders o</span><br><span class="line">		ON c.customer_id = o.customer_id</span><br><span class="line">LEFT JOIN shippers sh</span><br><span class="line">		ON o.shipper_id = sh.shipper_id</span><br><span class="line">ORDER BY c.customer_id</span><br></pre></td></tr></table></figure>
-
-<h1 id="NOTES"><a href="#NOTES" class="headerlink" title="NOTES:"></a>NOTES:</h1><p>Primary key is unique</p>
-<p>Foreign key is the key used to associate with other table for the variable</p>
-<p>Composite key is used when one key is not enough to identify the variable</p>
-<p>INT whole numbers</p>
-<p>DECIMAL(M, N) M digits of number with N digits decimal numbers</p>
-<p>VARCHAR(50) String of text of length 50 characteristics</p>
-<p>BLOB Binary Large Objects, Stores large data</p>
-<p>DATE ‘YYYY-MM-DD’</p>
-<p>TIMESTAMP ‘YYYY-MM-DD HH:MM:SS’ -used for recording</p>
-<h1 id="Related-Lists"><a href="#Related-Lists" class="headerlink" title="Related Lists:"></a>Related Lists:</h1><p>SQL 基础语句用法：<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=7S_tz1z_5bA">https://www.youtube.com/watch?v=7S_tz1z_5bA</a></p>
-<p>SQL DB, trigger:<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=HXV3zeQKqGY&amp;t=13459s">https://www.youtube.com/watch?v=HXV3zeQKqGY&amp;t=13459s</a></p>
-<p>Exercise:<br><a target="_blank" rel="noopener" href="https://www.w3schools.com/sql/sql_update.asp">https://www.w3schools.com/sql/sql_update.asp</a></p>
+<p>图标 ICON</p>
+<h4 id="3-4-面板"><a href="#3-4-面板" class="headerlink" title="3.4 面板"></a>3.4 面板</h4><p>JPanel</p>
+<h4 id="3-5-按钮"><a href="#3-5-按钮" class="headerlink" title="3.5 按钮"></a>3.5 按钮</h4><p>1.单选按钮</p>
+<p>记得分组</p>
+<p>2.复选按钮</p>
+<h4 id="3-6-列表（弹出列表）"><a href="#3-6-列表（弹出列表）" class="headerlink" title="3.6 列表（弹出列表）"></a>3.6 列表（弹出列表）</h4><p>列表框，下拉框</p>
+<h2 id="贪吃蛇小项目"><a href="#贪吃蛇小项目" class="headerlink" title="贪吃蛇小项目"></a>贪吃蛇小项目</h2><p>键盘监听</p>
+<p>时间 Timer</p>
 
       
 
@@ -284,11 +273,11 @@ ga('send', 'pageview');
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DataBase</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">GUI</a>
         		</li>
       		
 		</ul>
@@ -344,7 +333,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/28/2022-05-28-SQL/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/11/13/2022-11-14-GUI%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -358,18 +347,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Multi-Thread Contents
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/28/2022-05-28-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%89%A9%E5%B1%95%E5%8F%8A%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java数据类型拓展</div>
+    <a href="/2022/11/11/2022-11-12-%E7%BA%BF%E7%A8%8B%E7%A4%BC%E8%AE%A9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Multi-Thread Contents</div>
       <i class="icon-circle-right"></i>
     </a>
   
